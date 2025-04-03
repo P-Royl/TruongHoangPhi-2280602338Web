@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quản lý Sách</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .card {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            text-align: center;
+        }
+        .btn-edit {
+            background-color: #ffc107;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center text-primary mb-4">📚 Quản lý Sách</h2>
+
+    <div class="row">
+        <!-- Quản lý Sách -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">📖 Quản lý Sách</div>
+                <div class="card-body">
+                    <div class="mb-2">
+                        <label for="bookId">ID Sách:</label>
+                        <input type="text" id="bookId" class="form-control" readonly>
+                    </div>
+                    <input type="text" id="bookName" class="form-control mb-2" placeholder="Tên sách">
+                    <input type="number" id="bookPrice" class="form-control mb-2" placeholder="Giá">
+                    <input type="text" id="bookDescription" class="form-control mb-2" placeholder="Mô tả">
+                    <!-- Image Upload -->
+                    <div class="mb-2">
+                        <label for="imageUrl">Hình ảnh:</label>
+                        <input type="file" id="imageUrl" class="form-control mb-2">
+                    </div>
+                    <button id="btnAddBook" class="btn btn-success w-100">Thêm / Cập Nhật</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Danh sách dữ liệu -->
+        <div class="col-md-8">
+            <!-- Bảng Sách -->
+            <div class="card">
+                <div class="card-header bg-primary text-white">📖 Danh sách Sách</div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên Sách</th>
+                                <th>Giá</th>
+                                <th>Mô Tả</th>
+                                <th>Hình Ảnh</th>
+                                <th>Hành Động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bookList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Main JS -->
+<script src="js/main.js"></script>
+</body>
+</html>
